@@ -146,7 +146,7 @@ static const void *kVTMagicView = &kVTMagicView;
     CGRect originalContentFrame = _contentView.frame;
     CGFloat contentY = CGRectGetMaxY(_navigationView.frame);
     CGFloat contentH = size.height - contentY + (_needExtendBottom ? VTTABBAR_HEIGHT : 0);
-    _contentView.frame = CGRectMake(0, contentY, size.width, contentH);
+    _contentView.frame = CGRectMake(0, 0, size.width, contentH);
     if (!CGRectEqualToRect(_contentView.frame, originalContentFrame)) {
         [_contentView resetPageFrames];
     }
