@@ -267,7 +267,6 @@ static const void *kVTMagicView = &kVTMagicView;
 
 - (UIButton *)dequeueReusableItemWithIdentifier:(NSString *)identifier {
     UIButton *menuItem = [_menuBar dequeueReusableItemWithIdentifier:identifier];
-    [menuItem setTitleColor:_normalColor forState:UIControlStateNormal];
     if ([menuItem respondsToSelector:@selector(vtm_prepareForReuse)]) {
         [(id<VTMagicReuseProtocol>)menuItem vtm_prepareForReuse];
     }
